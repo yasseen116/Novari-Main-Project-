@@ -1,0 +1,265 @@
+/* General Styling */
+body {
+    background-color: #d9c2a3;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #7a5f4b !important;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    color: #f4e8d5 !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f4e8d5;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Product Cards */
+.product-card {
+    background-color: #f4e8d5;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Buttons */
+.btn {
+    background-color: #4e3d30;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #7a5f4b;
+}
+
+/* Footer */
+footer {
+    background-color: #7a5f4b;
+    color: #f4e8d5;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #f4e8d5;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #d9c2a3;
+}
+
+/* Contact Form */
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #7a5f4b;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+/* Product Image Container */
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%; /* Maintain a square aspect ratio */
+}
+
+/* Product Images */
+.product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Image */
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    opacity: 0; /* Hide the hover image by default */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.product-card:hover .product-image {
+    opacity: 0; /* Hide the main image on hover */
+}
+
+.product-card:hover .hover-image {
+    opacity: 1; /* Show the hover image on hover */
+}
+/* Hero Section */
+.hero-section {
+    background-color: #7a5f4b; /* Match the navbar color */
+    color: #f4e8d5; /* Light text color */
+    padding: 100px 0; /* Increase padding to make the section taller */
+    text-align: center;
+    height: 50vh; /* Make the section take up 50% of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 4rem; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.hero-section p {
+    font-size: 1.5rem; /* Increase the font size */
+    margin-bottom: 30px; /* Add space below the paragraph */
+}
+
+.hero-section .btn {
+    font-size: 1.2rem; /* Increase the button font size */
+    padding: 10px 20px; /* Add padding to the button */
+}/* Product Cards */
+.product-card {
+    background-color: #f4e8d5;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 30px; /* Add space below each product card */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.product-card .card-body {
+    padding: 20px; /* Add padding inside the card body */
+}
+
+/* Login, Signup, and Contact Forms */
+#login-form,
+#signup-form,
+#contact-form {
+    max-width: 400px;
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: #f4e8d5;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Add space below the form */
+}
+
+#login-form input,
+#signup-form input,
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; /* Add space between form fields */
+    border: 1px solid #7a5f4b;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+#login-form button,
+#signup-form button,
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px; /* Add space above the button */
+    background-color: #4e3d30;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#login-form button:hover,
+#signup-form button:hover,
+#contact-form button:hover {
+    background-color: #7a5f4b;
+}
+/* Favorite Icon */
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #ccc; /* Default color (unfavorited) */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.favorite-icon.active {
+    color: #ff0000; /* Red color for favorited items */
+}
